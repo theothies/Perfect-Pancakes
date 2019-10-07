@@ -3,4 +3,12 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="result_batter_description">Amount of batter needed:</string>
+    <string name="result_batter_ingredients">For the batter you\'ll need the following ingredients:</string>
+    <string name="result_starting">0 ml</string>
+    <string name="result_eggs_description">Amount of Eggs:</string>
+    <string name="result_milk_description">Amount of Milk:</string>
+    <string name="result_butter_description">Amount of Butter:</string>
+    <string name="result_flour_description">Amount of Flour:</string>
+    <string name="result_water_description">Amount of Water:</string>
 </resources>
