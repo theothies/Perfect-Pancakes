@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Perfect Pancakes</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Pancake Time</string>
+    <string name="title_dashboard">Your Recipe</string>
+    <string name="title_notifications">Pancake History</string>
     <string name="result_batter_description">Amount of batter needed:</string>
     <string name="result_batter_ingredients">For the batter you\'ll need the following ingredients:</string>
     <string name="result_starting">0 ml</string>
