@@ -11,4 +11,7 @@
     <string name="result_butter_description">Amount of Butter:</string>
     <string name="result_flour_description">Amount of Flour:</string>
     <string name="result_water_description">Amount of Water:</string>
+    <string name="input_diameter_description">Pan diameter in cm</string>
+    <string name="input_thiccness_description">Desired thickness in cm</string>
+    <string name="input_amount_description">Number of pancakes</string>
 </resources>
