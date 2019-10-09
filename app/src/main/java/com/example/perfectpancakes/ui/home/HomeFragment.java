@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.perfectpancakes.R;
+import com.example.perfectpancakes.ui.dashboard.DashboardFragment;
 
 import java.text.DecimalFormat;
 
@@ -40,6 +41,9 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        calculatePancakeRecipe(root);
+
         return root;
     }
 
@@ -48,7 +52,6 @@ public class HomeFragment extends Fragment {
           diameter = root.findViewById(R.id.diameter);
           thiccness = root.findViewById(R.id.thickness);
           number = root.findViewById(R.id.number);
-          result = root.findViewById(R.id.resultPancakes);
 
           calculate.setOnClickListener(new View.OnClickListener() {
 
@@ -63,14 +66,8 @@ public class HomeFragment extends Fragment {
                   double flour = res * 0.227;
                   double water = res * 0.155;
 
-                  result.setText("You need to make\n " + formatter.format(res) + "ml of pancake-batter\n"
-                          + "You need the following ingredients:\n"
-                          + formatter.format(egg) + " eggs\n"
-                          + formatter.format(milk) + " ml of milk\n"
-                          + formatter.format(butter) + " g of butter\n"
-                          + formatter.format(flour) + " g of plain flour\n"
-                          + formatter.format(water) + " ml of water\n"
-                          + "And a pinch of salt. Enjoy!");
+                  DashboardFragment.setResults(dia, thic, num, res, egg, milk, butter, flour, water);
+
               }
           });
     }

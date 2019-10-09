@@ -124,17 +124,17 @@
             android:text="@string/result_batter_description"
             android:gravity="start" />
 
-        <TextView
-            android:id="@+id/text_batter_result"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:text="@string/result_starting"/>
+            <TextView
+                android:id="@+id/text_batter_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
+                android:text="@string/result_starting_ml"
+                android:textAlignment="center"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -181,15 +181,15 @@
 
             <TextView
                 android:id="@+id/text_eggs_result"
-                android:layout_weight="0.3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
+                android:text="@string/result_starting_null"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:text="@string/result_starting"/>
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -214,15 +214,15 @@
 
             <TextView
                 android:id="@+id/text_milk_result"
-                android:layout_weight="0.3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
+                android:text="@string/result_starting_ml"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:text="@string/result_starting"/>
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -247,15 +247,15 @@
 
             <TextView
                 android:id="@+id/text_butter_result"
-                android:layout_weight="0.3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
+                android:text="@string/result_starting_g"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:text="@string/result_starting"/>
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -280,15 +280,15 @@
 
             <TextView
                 android:id="@+id/text_flour_result"
-                android:layout_weight="0.3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
+                android:text="@string/result_starting_g"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:text="@string/result_starting"/>
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -313,15 +313,15 @@
 
             <TextView
                 android:id="@+id/text_water_result"
-                android:layout_weight="0.3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
+                android:text="@string/result_starting_ml"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:text="@string/result_starting"/>
+                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
