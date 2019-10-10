@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -20,6 +21,7 @@ import com.example.perfectpancakes.PancakeRoomDatabase;
 import com.example.perfectpancakes.R;
 import com.example.perfectpancakes.dao.PancakeDao;
 import com.example.perfectpancakes.models.Pancake;
+import com.example.perfectpancakes.ui.dashboard.DashboardFragment;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -101,7 +103,7 @@ public class HomeFragment extends Fragment {
 
     private void savePancakeOnClick() {
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy hh:mm");
         String strDate = formatter.format(date);
 
         if(!title.getText().toString().isEmpty() &&
@@ -122,6 +124,10 @@ public class HomeFragment extends Fragment {
                             strDate, Double.parseDouble(diameter.getText().toString()),
                             Double.parseDouble(thiccness.getText().toString()), batter,
                             egg, milk, butter, flour, water, Integer.parseInt(number.getText().toString())));
+
+            Fragment fragment = new DashboardFragment();
+            replaceFragment(fragment);
+
         }else{
             Toast.makeText(getActivity(),"Please fill every parameter", Toast.LENGTH_SHORT).show();
         }
@@ -139,6 +145,13 @@ public class HomeFragment extends Fragment {
         protected void onPostExecute(Void aVoid){
             super.onPostExecute(aVoid);
         }
+    }
+
+    public void replaceFragment(Fragment someFragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.nav_host_fragment, someFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 }

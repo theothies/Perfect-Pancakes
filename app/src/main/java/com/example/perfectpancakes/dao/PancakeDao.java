@@ -24,6 +24,8 @@ public interface PancakeDao {
     public void delete(Pancake pancake);
 
     @Query("SELECT * FROM pancakes")
-    public List<Pancake> getItems();
+    public List<Pancake> getAll();
+
+    //@Query("SELECT * FROM pancakes WHERE id ")
 
 }
