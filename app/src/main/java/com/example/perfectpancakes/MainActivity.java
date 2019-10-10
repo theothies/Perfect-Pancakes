@@ -1,7 +1,10 @@
 package com.example.perfectpancakes;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 
+import com.example.perfectpancakes.dao.PancakeDao;
+import com.example.perfectpancakes.models.Pancake;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +20,7 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
     DecimalFormat formatter = new DecimalFormat("#");
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-
     }
 
 }
