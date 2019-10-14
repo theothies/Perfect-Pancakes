@@ -128,6 +128,7 @@ public class HomeFragment extends Fragment {
             Fragment fragment = new DashboardFragment();
             replaceFragment(fragment);
 
+
         }else{
             Toast.makeText(getActivity(),"Please fill every parameter", Toast.LENGTH_SHORT).show();
         }

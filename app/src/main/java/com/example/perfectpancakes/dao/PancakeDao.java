@@ -23,7 +23,7 @@ public interface PancakeDao {
     @Delete
     public void delete(Pancake pancake);
 
-    @Query("SELECT * FROM pancakes")
+    @Query("SELECT * FROM pancakes ORDER BY id DESC")
     public List<Pancake> getAll();
 
     //@Query("SELECT * FROM pancakes WHERE id ")
