@@ -17,4 +17,5 @@
     <string name="input_diameter_description">Pan diameter in cm</string>
     <string name="input_thiccness_description">Desired thickness in cm</string>
     <string name="input_amount_description">Number of pancakes</string>
+    <string name="button_Lets_make_pancakes">Let's Make Pancakes!</string>
 </resources>
