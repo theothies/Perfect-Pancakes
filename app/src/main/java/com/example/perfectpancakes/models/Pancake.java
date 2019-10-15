@@ -1,11 +1,14 @@
 package com.example.perfectpancakes.models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName="pancakes")
-public class Pancake{
+public class Pancake implements Parcelable {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;
@@ -79,6 +82,16 @@ public class Pancake{
 
     public int getAmount(){
         return amount;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
     }
 }
 

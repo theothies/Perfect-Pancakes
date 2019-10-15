@@ -119,14 +119,22 @@ public class HomeFragment extends Fragment {
             double flour = batter * 0.227;
             double water = batter * 0.155;
 
-            new SaveTask()
-                    .execute(new Pancake(title.getText().toString(),
-                            strDate, Double.parseDouble(diameter.getText().toString()),
-                            Double.parseDouble(thiccness.getText().toString()), batter,
-                            egg, milk, butter, flour, water, Integer.parseInt(number.getText().toString())));
+            Pancake pancake = new Pancake(title.getText().toString(),
+                    strDate, Double.parseDouble(diameter.getText().toString()),
+                    Double.parseDouble(thiccness.getText().toString()), batter,
+                    egg, milk, butter, flour, water, Integer.parseInt(number.getText().toString()));
+
+                    new SaveTask()
+                    .execute(pancake);
 
             Fragment fragment = new DashboardFragment();
             replaceFragment(fragment);
+
+            Bundle paramPancake = new Bundle();
+            paramPancake.putParcelable("pancake", pancake);
+
+            fragment.setArguments(paramPancake);
+
 
 
         }else{

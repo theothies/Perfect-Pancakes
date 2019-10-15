@@ -13,12 +13,16 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.perfectpancakes.R;
+import com.example.perfectpancakes.models.Pancake;
+
+import java.text.DecimalFormat;
 
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
     private  TextView dia_input, thicc_input, amount_input;
     private  TextView batter_output, egg_output, milk_output, butter_output, flour_output, water_output;
+    private DecimalFormat formatter = new DecimalFormat("#");
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -26,6 +30,11 @@ public class DashboardFragment extends Fragment {
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
         addTVtoView(root);
+        Bundle paramPancake = this.getArguments();
+        if (paramPancake != null) {
+            Pancake pancake = paramPancake.getParcelable("pancake");
+            setResults(pancake);
+        }
         return root;
     }
 
@@ -46,17 +55,16 @@ public class DashboardFragment extends Fragment {
         water_output = root.findViewById(R.id.text_water_result);
     }
 
-    public void setResults(double dia, double thic, int num,
-                                  double res, double egg, double milk,
-                                  double butter, double flour, double water){
-        dia_input.setText(""+dia+" cm");
-        thicc_input.setText(""+thic+" cm");
-        amount_input.setText(""+num);
-        batter_output.setText(""+res+" ml");
-        egg_output.setText(""+egg);
-        milk_output.setText(""+milk+" ml");
-        butter_output.setText(""+butter+" g");
-        flour_output.setText(""+flour+" g");
-        water_output.setText(""+water+" ml");
+    public void setResults(Pancake pancake){
+
+        dia_input.setText(""+pancake.getDiameter()+" cm");
+        thicc_input.setText(""+pancake.getThickness()+" cm");
+        amount_input.setText(""+pancake.getAmount());
+        batter_output.setText(""+formatter.format(pancake.getBatter())+" ml");
+        egg_output.setText(""+formatter.format(pancake.getEgg()));
+        milk_output.setText(""+formatter.format(pancake.getMilk())+" ml");
+        butter_output.setText(""+formatter.format(pancake.getButter())+" g");
+        flour_output.setText(""+formatter.format(pancake.getFlour())+" g");
+        water_output.setText(""+formatter.format(pancake.getWater())+" ml");
     }
 }
