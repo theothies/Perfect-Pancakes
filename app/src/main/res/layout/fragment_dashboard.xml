@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="24dp">
 
             <TextView
                 android:id="@+id/text_diameter_description"
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="16dp">
 
             <TextView
                 android:id="@+id/text_thicc_description"
@@ -59,7 +59,7 @@
                 android:layout_marginEnd="8dp"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
-                android:text="@string/input_diameter_description"
+                android:text="@string/input_thiccness_description"
                 android:gravity="start" />
 
             <TextView
@@ -71,14 +71,15 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
                 android:textAlignment="center"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="16dp">
 
             <TextView
                 android:id="@+id/text_amount_description"
@@ -90,7 +91,7 @@
                 android:layout_marginEnd="8dp"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
-                android:text="@string/input_diameter_description"
+                android:text="@string/input_amount_description"
                 android:gravity="start" />
 
             <TextView
@@ -102,14 +103,15 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
                 android:textAlignment="center"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"/>
         </LinearLayout>
 
         <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="16dp">
 
         <TextView
             android:id="@+id/text_batter_description"
@@ -117,7 +119,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:textAlignment="textStart"
             android:textSize="20sp"
@@ -129,19 +131,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_ml"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
             >
 
             <TextView
@@ -150,12 +153,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
                 android:text="@string/result_batter_ingredients"
-                android:gravity="start" />
+                android:gravity="start"/>
 
         </LinearLayout>
 
@@ -163,7 +166,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
             >
 
             <TextView
@@ -172,7 +175,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
@@ -184,19 +187,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_null"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
             >
 
             <TextView
@@ -205,7 +209,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
@@ -217,19 +221,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_ml"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
             >
 
             <TextView
@@ -238,7 +243,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
@@ -250,19 +255,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_g"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
             >
 
             <TextView
@@ -271,7 +277,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
@@ -283,19 +289,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_g"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
             >
 
             <TextView
@@ -304,7 +311,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
@@ -316,12 +323,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_ml"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
