@@ -48,6 +48,7 @@ public class HomeFragment extends Fragment {
 
         dao = PancakeRoomDatabase.getDatabase(getActivity()).pancakeDao();
 
+        /*
         final TextView textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
@@ -55,6 +56,7 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+         */
 
 
         getViews(root);
