@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 
 import com.example.perfectpancakes.PancakeRoomDatabase;
 import com.example.perfectpancakes.R;
@@ -91,11 +92,9 @@ public class HomeFragment extends Fragment {
                     .execute(pancake);
 
             Fragment fragment = new DashboardFragment();
-            replaceFragment(fragment);
-
             Bundle paramPancake = new Bundle();
             paramPancake.putParcelable("pancake", pancake);
-
+            Navigation.findNavController(root).navigate(R.id.navigation_dashboard, paramPancake);
             fragment.setArguments(paramPancake);
 
 
