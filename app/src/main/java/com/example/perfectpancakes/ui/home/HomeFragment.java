@@ -7,14 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.perfectpancakes.PancakeRoomDatabase;
@@ -23,7 +20,6 @@ import com.example.perfectpancakes.dao.PancakeDao;
 import com.example.perfectpancakes.models.Pancake;
 import com.example.perfectpancakes.ui.dashboard.DashboardFragment;
 
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -44,24 +40,13 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
+
         root = inflater.inflate(R.layout.fragment_home, container, false);
 
         dao = PancakeRoomDatabase.getDatabase(getActivity()).pancakeDao();
 
-        /*
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-         */
-
-
         getViews(root);
 
-         //calculatePancakeRecipe(root);
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,30 +63,6 @@ public class HomeFragment extends Fragment {
         thiccness = root.findViewById(R.id.thickness);
         number = root.findViewById(R.id.number);
     }
-/*    public void calculatePancakeRecipe (View root){
-          calculate = root.findViewById(R.id.calculate);
-          diameter = root.findViewById(R.id.diameter);
-          thiccness = root.findViewById(R.id.thickness);
-          number = root.findViewById(R.id.number);
-
-          calculate.setOnClickListener(new View.OnClickListener() {
-
-              public void onClick(View root){
-                  double dia =Double.parseDouble(diameter.getText().toString());
-                  double thic = Double.parseDouble(thiccness.getText().toString());
-                  int num = Integer.parseInt(number.getText().toString());
-                  double res = ((dia * dia) * thic * Math.PI * 1.06 * num)/4;
-                  double egg = res * 0.004;
-                  double milk = res * 0.412;
-                  double butter = res * 0.103;
-                  double flour = res * 0.227;
-                  double water = res * 0.155;
-
-                  DashboardFragment.setResults(dia, thic, num, res, egg, milk, butter, flour, water);
-
-              }
-          });
-    } */
 
     private void savePancakeOnClick() {
         Date date = new Date();
