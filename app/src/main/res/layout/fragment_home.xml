@@ -5,12 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <FrameLayout
+        android:background="@drawable/rounded_textfield"
+        android:layout_width="255dp"
+        android:layout_height="325dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculate"
+        app:layout_constraintEnd_toEndOf="@+id/number"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/number"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:layout_constraintVertical_bias="0.496">
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/calculate"
-        android:layout_width="114dp"
-        android:layout_height="55dp"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
         android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_button"
         android:text="@string/button_Lets_make_pancakes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -21,7 +40,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="@string/input_title_description"
         android:inputType="textCapWords"
@@ -64,5 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/thickness" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
