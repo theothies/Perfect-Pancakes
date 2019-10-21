@@ -18,5 +18,15 @@
     <string name="input_thiccness_description">Desired thickness in cm</string>
     <string name="input_amount_description">Number of pancakes</string>
     <string name="button_Lets_make_pancakes">Let\'s Make Pancakes!</string>
-    <string name="about_perfect_pancakes">Das ist ein kleiner Test um zu sehen, ob der Button funktioniert!</string>
+    <string name="about_what_is_pp"><b>What is Perfect Pancakes?</b></string>
+    <string name="about_perfect_pancakes">Perfect Pancakes is an App that tells you the perfect
+        amount of ingredients depending on your diameter of your pan, the desired thickness of your
+        pancakes and the amount of pancakes you want to cook!
+    </string>
+    <string name="about_formular"><b>How does it work?</b></string>
+    <string name="about_formular_explained">The formular of <b>Perfect Pancakes</b> is based on a
+    research from ...
+    </string>
+    <string name="about_more"><b>You can find more about this here:</b></string>
+    <string name="about_more_link"><a href="https://phys.org/news/2016-02-secret-pancake-mathematically.html">Article about how to make the perfect pancakes</a></string>
 </resources>
