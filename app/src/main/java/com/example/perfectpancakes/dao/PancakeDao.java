@@ -29,4 +29,6 @@ public interface PancakeDao {
     @Query("SELECT * FROM pancakes WHERE title LIKE :title")
     public Pancake getPancake(String title);
 
+    @Query("SELECT * FROM pancakes ORDER BY id DESC LIMIT 1")
+    Pancake getLastPancake();
 }

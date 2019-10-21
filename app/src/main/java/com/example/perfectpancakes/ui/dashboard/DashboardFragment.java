@@ -1,24 +1,27 @@
 package com.example.perfectpancakes.ui.dashboard;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.perfectpancakes.PancakeRoomDatabase;
 import com.example.perfectpancakes.R;
+import com.example.perfectpancakes.dao.PancakeDao;
 import com.example.perfectpancakes.models.Pancake;
 
 import java.text.DecimalFormat;
 
 public class DashboardFragment extends Fragment {
 
+    private View root;
+    private PancakeDao dao;
     private DashboardViewModel dashboardViewModel;
     private  TextView dia_input, thicc_input, amount_input;
     private  TextView batter_output, egg_output, milk_output, butter_output, flour_output, water_output;
@@ -28,11 +31,16 @@ public class DashboardFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        dao = PancakeRoomDatabase.getDatabase(getActivity()).pancakeDao();
         addTVtoView(root);
         Bundle paramPancake = this.getArguments();
+
         if (paramPancake != null) {
             Pancake pancake = paramPancake.getParcelable("pancake");
+            setResults(pancake);
+        }else {
+            Pancake pancake = new Pancake(new LadeLastPancakeTask().execute());
             setResults(pancake);
         }
         return root;
@@ -66,5 +74,16 @@ public class DashboardFragment extends Fragment {
         butter_output.setText(""+formatter.format(pancake.getButter())+" g");
         flour_output.setText(""+formatter.format(pancake.getFlour())+" g");
         water_output.setText(""+formatter.format(pancake.getWater())+" ml");
+    }
+
+    class LadeLastPancakeTask extends AsyncTask<String, String, Pancake> {
+
+        @Override
+        protected Pancake doInBackground(String... params) {
+
+            return dao.getLastPancake();
+
+        }
+
     }
 }
