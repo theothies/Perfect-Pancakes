@@ -26,6 +26,7 @@ public interface PancakeDao {
     @Query("SELECT * FROM pancakes ORDER BY id DESC")
     public List<Pancake> getAll();
 
-    //@Query("SELECT * FROM pancakes WHERE id ")
+    @Query("SELECT * FROM pancakes WHERE title LIKE :title")
+    public Pancake getPancake(String title);
 
 }

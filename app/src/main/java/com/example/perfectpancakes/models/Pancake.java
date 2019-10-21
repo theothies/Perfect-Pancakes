@@ -1,5 +1,6 @@
 package com.example.perfectpancakes.models;
 
+import android.os.AsyncTask;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -16,6 +17,9 @@ public class Pancake implements Parcelable {
     private String date;
     private double diameter, thickness, batter, egg, milk, butter, flour, water;
     private int amount;
+
+    public Pancake(AsyncTask<String, String, Pancake> execute){
+    }
 
     public Pancake(String title, String date, double diameter, double thickness, double batter,
                    double egg, double milk, double butter, double flour, double water, int amount){

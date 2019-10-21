@@ -3,6 +3,7 @@ package com.example.perfectpancakes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,8 +17,10 @@ import java.util.List;
 public class PancakeListAdapter extends RecyclerView.Adapter {
 
     private List<Pancake> pancakes = Collections.emptyList();
+    private OnItemListener onItemListener;
 
-    public PancakeListAdapter(){
+    public PancakeListAdapter(OnItemListener onItemListener){
+        this.onItemListener = onItemListener;
     }
 
     @NonNull
@@ -25,7 +28,7 @@ public class PancakeListAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.pancake_list_item, parent, false);
-        return new PancakeViewHolder(view);
+        return new PancakeViewHolder(view,onItemListener);
     }
 
     @Override
@@ -44,11 +47,24 @@ public class PancakeListAdapter extends RecyclerView.Adapter {
         notifyDataSetChanged();
     }
 
-    class PancakeViewHolder extends RecyclerView.ViewHolder{
 
-        public PancakeViewHolder(@NonNull View itemView){
+
+    public class PancakeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+        OnItemListener onItemListener;
+        public PancakeViewHolder(@NonNull View itemView, OnItemListener onItemListener){
 
             super(itemView);
+            this.onItemListener=onItemListener;
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view) {
+            onItemListener.onItemClick(getAdapterPosition());
+        }
+    }
+    public interface OnItemListener {
+        void onItemClick(int position);
     }
 }
