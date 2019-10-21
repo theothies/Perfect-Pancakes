@@ -2,6 +2,8 @@ package com.example.perfectpancakes;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import com.example.perfectpancakes.dao.PancakeDao;
 import com.example.perfectpancakes.models.Pancake;
@@ -18,7 +20,6 @@ import org.w3c.dom.Text;
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
-    DecimalFormat formatter = new DecimalFormat("#");
 
 
     @Override
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mymenu, menu);
+        return true;
     }
 
 }
