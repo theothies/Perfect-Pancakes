@@ -1,12 +1,10 @@
 package com.example.perfectpancakes;
 
-import android.os.AsyncTask;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 
-import com.example.perfectpancakes.dao.PancakeDao;
-import com.example.perfectpancakes.models.Pancake;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,12 +13,12 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import org.w3c.dom.Text;
-
-import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71a15991a88dd1a361c85f682f53e102cf52402e
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
