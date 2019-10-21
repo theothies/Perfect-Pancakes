@@ -3,128 +3,129 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorTransparentWhite">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="24dp">
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_diameter_description"
-                android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
+                android:layout_weight="0.7"
+                android:gravity="start"
                 android:text="@string/input_diameter_description"
-                android:gravity="start" />
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/text_diameter_input"
-                android:layout_weight="0.3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
                 android:textAlignment="center"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_thicc_description"
-                android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
+                android:layout_weight="0.7"
+                android:gravity="start"
                 android:text="@string/input_thiccness_description"
-                android:gravity="start" />
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/text_thicc_input"
-                android:layout_weight="0.3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_amount_description"
-                android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
+                android:layout_weight="0.7"
+                android:gravity="start"
                 android:text="@string/input_amount_description"
-                android:gravity="start" />
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/text_amount_input"
-                android:layout_weight="0.3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp">
-
-        <TextView
-            android:id="@+id/text_batter_description"
-            android:layout_weight="0.7"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="textStart"
-            android:textSize="20sp"
-            android:text="@string/result_batter_description"
-            android:gravity="start" />
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_batter_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="0.7"
+                android:gravity="start"
+                android:text="@string/result_batter_description"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/text_batter_result"
@@ -136,51 +137,50 @@
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_ml"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_ingredients_description"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/result_batter_ingredients"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
-                android:text="@string/result_batter_ingredients"
-                android:gravity="start"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_eggs_description"
-                android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
+                android:layout_weight="0.7"
+                android:gravity="start"
                 android:text="@string/result_eggs_description"
-                android:gravity="start" />
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/text_eggs_result"
@@ -192,29 +192,28 @@
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_null"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_milk_description"
-                android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
+                android:layout_weight="0.7"
+                android:gravity="start"
                 android:text="@string/result_milk_description"
-                android:gravity="start" />
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/text_milk_result"
@@ -226,29 +225,28 @@
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_ml"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_butter_description"
-                android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
+                android:layout_weight="0.7"
+                android:gravity="start"
                 android:text="@string/result_butter_description"
-                android:gravity="start" />
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/text_butter_result"
@@ -260,29 +258,28 @@
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_g"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_flour_description"
-                android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
+                android:layout_weight="0.7"
+                android:gravity="start"
                 android:text="@string/result_flour_description"
-                android:gravity="start" />
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/text_flour_result"
@@ -294,29 +291,28 @@
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_g"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_water_description"
-                android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
+                android:layout_weight="0.7"
+                android:gravity="start"
                 android:text="@string/result_water_description"
-                android:gravity="start" />
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/text_water_result"
@@ -328,8 +324,8 @@
                 android:layout_weight="0.3"
                 android:text="@string/result_starting_ml"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
