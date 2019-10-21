@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
 
     private View root;
     private PancakeDao dao;
-
+    private Button about;
     private HomeViewModel homeViewModel;
     private Button calculate;
     private EditText title;

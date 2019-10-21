@@ -18,4 +18,5 @@
     <string name="input_thiccness_description">Desired thickness in cm</string>
     <string name="input_amount_description">Number of pancakes</string>
     <string name="button_Lets_make_pancakes">Let\'s Make Pancakes!</string>
+    <string name="about_perfect_pancakes">Das ist ein kleiner Test um zu sehen, ob der Button funktioniert!</string>
 </resources>
