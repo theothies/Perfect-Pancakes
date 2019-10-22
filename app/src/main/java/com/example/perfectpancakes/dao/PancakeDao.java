@@ -21,7 +21,7 @@ public interface PancakeDao {
     public void update(Pancake... pancakes);
 
     @Delete
-    public void delete(Pancake pancake);
+    public void deletePancake(Pancake pancake);
 
     @Query("SELECT * FROM pancakes ORDER BY id DESC")
     public List<Pancake> getAll();
