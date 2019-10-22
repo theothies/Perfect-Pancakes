@@ -5,6 +5,7 @@
     <color name="colorTransparentWhite">#A6FFFFFF</color>
     <color name="colorPrimary">#eca24d</color>
     <color name="colorPrimaryDark">#b45326</color>
+    <color name="colorPrimaryDarkTrans">#A6B45326</color>
     <color name="colorAccent">#302e53</color>
-    <color name="colorAccent40">#66302e53</color>
+    <color name="colorAccent40">#99302E53</color>
 </resources>

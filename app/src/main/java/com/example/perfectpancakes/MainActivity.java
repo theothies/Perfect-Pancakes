@@ -1,7 +1,12 @@
 package com.example.perfectpancakes;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -13,6 +18,7 @@ import androidx.navigation.ui.NavigationUI;
 
 
 public class MainActivity extends AppCompatActivity {
+    private Button about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,25 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem about) {
+        switch (about.getItemId()) {
+            case R.id.about:
+                Intent intent = new Intent(this, ActivityAbout.class);
+                this.startActivity(intent);
+                return true;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mymenu, menu);
+        return true;
     }
 
 }
