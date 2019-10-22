@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.perfectpancakes.MainActivity;
 import com.example.perfectpancakes.PancakeRoomDatabase;
 import com.example.perfectpancakes.R;
 import com.example.perfectpancakes.dao.PancakeDao;
@@ -39,9 +40,6 @@ public class DashboardFragment extends Fragment {
         if (paramPancake != null) {
             Pancake pancake = paramPancake.getParcelable("pancake");
             setResults(pancake);
-        }else {
-            Pancake pancake = new Pancake(new LadeLastPancakeTask().execute());
-            setResults(pancake);
         }
         return root;
     }
@@ -64,7 +62,7 @@ public class DashboardFragment extends Fragment {
     }
 
     public void setResults(Pancake pancake){
-
+        getActivity().setTitle(""+pancake.getTitle());
         dia_input.setText(""+pancake.getDiameter()+" cm");
         thicc_input.setText(""+pancake.getThickness()+" cm");
         amount_input.setText(""+pancake.getAmount());
@@ -74,16 +72,5 @@ public class DashboardFragment extends Fragment {
         butter_output.setText(""+formatter.format(pancake.getButter())+" g");
         flour_output.setText(""+formatter.format(pancake.getFlour())+" g");
         water_output.setText(""+formatter.format(pancake.getWater())+" ml");
-    }
-
-    class LadeLastPancakeTask extends AsyncTask<String, String, Pancake> {
-
-        @Override
-        protected Pancake doInBackground(String... params) {
-
-            return dao.getLastPancake();
-
-        }
-
     }
 }

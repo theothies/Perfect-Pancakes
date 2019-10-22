@@ -15,20 +15,21 @@ import java.util.List;
 public interface PancakeDao {
 
     @Insert
-    public void insert(Pancake... pancakes);
+    void insert(Pancake... pancakes);
 
     @Update
-    public void update(Pancake... pancakes);
+    void update(Pancake... pancakes);
 
     @Delete
-    public void deletePancake(Pancake pancake);
+    void deletePancake(Pancake pancake);
 
     @Query("SELECT * FROM pancakes ORDER BY id DESC")
-    public List<Pancake> getAll();
+    List<Pancake> getAll();
 
     @Query("SELECT * FROM pancakes WHERE title LIKE :title")
-    public Pancake getPancake(String title);
+    Pancake getPancake(String title);
 
-    @Query("SELECT * FROM pancakes ORDER BY id DESC LIMIT 1")
-    Pancake getLastPancake();
+    @Query("DELETE FROM pancakes WHERE title LIKE :title")
+    void deleteByTitle(String title);
+
 }

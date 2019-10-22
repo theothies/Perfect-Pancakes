@@ -3,21 +3,23 @@ package com.example.perfectpancakes.models;
 import android.os.AsyncTask;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName="pancakes")
 public class Pancake implements Parcelable {
+
     @PrimaryKey(autoGenerate = true)
-    @NonNull
-    private int id;
+    private Integer id;
+
     private String title;
     private String date;
     private double diameter, thickness, batter, egg, milk, butter, flour, water;
     private int amount;
 
+
+    @Ignore
     public Pancake(AsyncTask<String, String, Pancake> execute){
     }
 
@@ -63,11 +65,16 @@ public class Pancake implements Parcelable {
         }
     };
 
-    public int getId(){
+    @Ignore
+    public Pancake() {
+
+    }
+
+    public Integer getId(){
         return id;
     }
 
-    public void setId(int id){
+    public void setId(Integer id){
         this.id = id;
     }
 
