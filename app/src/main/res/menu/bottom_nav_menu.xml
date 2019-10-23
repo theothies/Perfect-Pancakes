@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_whatshot_black_24dp"
+        android:icon="@drawable/pancake_icon"
         android:title="@string/title_home" />
 
     <item
@@ -13,6 +13,6 @@
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_inbox_black_24dp"
+        android:icon="@drawable/baseline_history_black_18dp"
         android:title="@string/title_notifications" />
 </menu>
