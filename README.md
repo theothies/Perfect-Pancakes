@@ -12,9 +12,9 @@ For the perfect pancakes you need 3 Parameters:
 * the amount of pancakes you want to eat A
 
 ### The Formular
-```
+
 D<sup>2</sup> * T * A
-```
+
 
 
 ### An Example
