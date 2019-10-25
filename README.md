@@ -12,10 +12,10 @@ For the perfect pancakes you need 3 Parameters:
 * the amount of pancakes you want to eat A
 
 ### The Formular
-Display:
-```mathjax
-\dfrac{a}{b}
-```
+
+~~~texmath
+{\frac{n(n+1)}{2}}^2
+~~~
 
 
 ### An Example
