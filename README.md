@@ -13,7 +13,7 @@ For the perfect pancakes you need 3 Parameters:
 
 ### The Formular
 
-D<sup>2</sup> * T * A
+$\frac{D^2 \times T \times \pi \times A }{4}
 
 
 
