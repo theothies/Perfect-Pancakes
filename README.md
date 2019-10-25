@@ -13,9 +13,7 @@ For the perfect pancakes you need 3 Parameters:
 
 ### The Formular
 
-```mathjax
-x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-```
+D<sup>2</sup> x T x $\pi$ x A
 
 
 ### An Example
