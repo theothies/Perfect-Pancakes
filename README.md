@@ -13,7 +13,7 @@ For the perfect pancakes you need 3 Parameters:
 
 ### The Formular
 ```
-$D^2 * T * A$
+D<sup>2</sup> * T * A
 ```
 
 
