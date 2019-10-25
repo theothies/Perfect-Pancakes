@@ -1,4 +1,4 @@
-package com.example.perfectpancakes.ui.notifications;
+package com.example.perfectpancakes.ui.history;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -18,10 +18,10 @@ import com.example.perfectpancakes.PancakeListAdapter;
 import com.example.perfectpancakes.PancakeRoomDatabase;
 import com.example.perfectpancakes.R;
 import com.example.perfectpancakes.models.Pancake;
-import com.example.perfectpancakes.ui.dashboard.DashboardFragment;
+import com.example.perfectpancakes.ui.recipe.RecipeFragment;
 import java.util.List;
 
-public class NotificationsFragment extends Fragment implements PancakeListAdapter.OnItemListener {
+public class HistoryFragment extends Fragment implements PancakeListAdapter.OnItemListener {
     private View root;
     private RecyclerView recyclerView;
     private PancakeListAdapter adapter;
@@ -31,7 +31,7 @@ public class NotificationsFragment extends Fragment implements PancakeListAdapte
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        root = inflater.inflate(R.layout.fragment_history, container, false);
 
         mDB = PancakeRoomDatabase.getDatabase(getActivity());
 
@@ -105,7 +105,7 @@ public class NotificationsFragment extends Fragment implements PancakeListAdapte
         @Override
         protected void onPostExecute(Pancake pancake) {
             super.onPostExecute(pancake);
-            Fragment fragment = new DashboardFragment();
+            Fragment fragment = new RecipeFragment();
             Bundle paramPancake = new Bundle();
             paramPancake.putParcelable("pancake", pancake);
             Navigation.findNavController(root).navigate(R.id.navigation_dashboard, paramPancake);

@@ -1,4 +1,4 @@
-package com.example.perfectpancakes.ui.home;
+package com.example.perfectpancakes.ui.pancake;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -18,17 +18,16 @@ import com.example.perfectpancakes.PancakeRoomDatabase;
 import com.example.perfectpancakes.R;
 import com.example.perfectpancakes.dao.PancakeDao;
 import com.example.perfectpancakes.models.Pancake;
-import com.example.perfectpancakes.ui.dashboard.DashboardFragment;
+import com.example.perfectpancakes.ui.recipe.RecipeFragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class HomeFragment extends Fragment {
+public class PancakeFragment extends Fragment {
 
     private View root;
     private PancakeDao dao;
-    private Button about;
-    private HomeViewModel homeViewModel;
+    private PancakeViewModel pancakeViewModel;
     private Button calculate;
     private EditText title;
     private EditText diameter;
@@ -37,9 +36,9 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
+        pancakeViewModel = ViewModelProviders.of(this).get(PancakeViewModel.class);
 
-        root = inflater.inflate(R.layout.fragment_home, container, false);
+        root = inflater.inflate(R.layout.fragment_pancake, container, false);
 
         dao = PancakeRoomDatabase.getDatabase(getActivity()).pancakeDao();
 
@@ -90,7 +89,7 @@ public class HomeFragment extends Fragment {
 
                     new SaveTask().execute(pancake);
 
-            Fragment fragment = new DashboardFragment();
+            Fragment fragment = new RecipeFragment();
             Bundle paramPancake = new Bundle();
             paramPancake.putParcelable("pancake", pancake);
             Navigation.findNavController(root).navigate(R.id.navigation_dashboard, paramPancake);

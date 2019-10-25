@@ -1,6 +1,5 @@
-package com.example.perfectpancakes.ui.dashboard;
+package com.example.perfectpancakes.ui.recipe;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.perfectpancakes.MainActivity;
 import com.example.perfectpancakes.PancakeRoomDatabase;
 import com.example.perfectpancakes.R;
 import com.example.perfectpancakes.dao.PancakeDao;
@@ -19,20 +17,20 @@ import com.example.perfectpancakes.models.Pancake;
 
 import java.text.DecimalFormat;
 
-public class DashboardFragment extends Fragment {
+public class RecipeFragment extends Fragment {
 
     private View root;
     private PancakeDao dao;
-    private DashboardViewModel dashboardViewModel;
+    private RecipeViewModel recipeViewModel;
     private  TextView dia_input, thicc_input, amount_input;
     private  TextView batter_output, egg_output, milk_output, butter_output, flour_output, water_output;
     private DecimalFormat formatter = new DecimalFormat("#");
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
-        root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        recipeViewModel =
+                ViewModelProviders.of(this).get(RecipeViewModel.class);
+        root = inflater.inflate(R.layout.fragment_recipe, container, false);
         dao = PancakeRoomDatabase.getDatabase(getActivity()).pancakeDao();
         addTVtoView(root);
         Bundle paramPancake = this.getArguments();
