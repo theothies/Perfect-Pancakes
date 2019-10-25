@@ -13,8 +13,7 @@ For the perfect pancakes you need 3 Parameters:
 
 ### The Formular
 
-\frac{D^{2}\cdot T \cdot \pi \cdot A}{4}
-
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 ### An Example
 
