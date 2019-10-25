@@ -14,7 +14,7 @@ For the perfect pancakes you need 3 Parameters:
 ### The Formular
 
 batter needed in ml =  
-    ![equation](http://www.sciweavers.org/tex2img.php?eq=%5Cfrac%7BD%5E%7B2%7D%5Ccdot%20T%20%5Ccdot%20%5Cpi%20%5Ccdot%20A%7D%7B4%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+        ![equation](http://www.sciweavers.org/tex2img.php?eq=%5Cfrac%7BD%5E%7B2%7D%5Ccdot%20T%20%5Ccdot%20%5Cpi%20%5Ccdot%20A%7D%7B4%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 ### An Example
 
