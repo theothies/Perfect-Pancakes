@@ -10,7 +10,7 @@ For the perfect pancakes you need 3 Parameters:
 * **D** = the diameter of the pan you're using in cm
 * **T** = the desired thickness of your pancakes in cm
 * **A** = the amount of pancakes you want to eat
-* batter needed in millilitres is: 
+* batter needed in millilitres is:  
 
 ![equation](http://www.sciweavers.org/tex2img.php?eq=%20%5Cfrac%7BD%5E%7B2%7D%20%5Ccdot%20T%20%5Ccdot%20%20%5Cpi%20%5Ccdot%20A%20%7D%7B4%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
