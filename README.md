@@ -13,9 +13,9 @@ For the perfect pancakes you need 3 Parameters:
 
 ### The Formular
 
-~~~texmath
-{\frac{n(n+1)}{2}}^2
-~~~
+```mathjax
+x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+```
 
 
 ### An Example
