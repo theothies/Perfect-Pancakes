@@ -20,17 +20,17 @@ It is part of a lecture in our Business IT Bachelor.
 
 1.	Öffnen sie die App „Perfect Pancakes“
 2.	Es erscheint die Hauptseite, die mehrere Möglichkeiten bietet:
-  a.	Oben Rechts ist ein Fragezeichen-Symbol für weitere Informationen zur Formel und zur App
-  b.	Die Seite an sich bietet die Möglichkeit die folgenden Parameter einzugeben:
-    i.	„Name of the Recipe“ - Name des Rezeptes
-    ii.	„Pan diameter in cm“ - Pfannendurchmesser in Zentimeter
-    iii.	„Desired thickness in cm“ - Gewünschte Dicke der Pfannkuchen in Zentimeter
-    iv.	„Number of Pancakes“ - Anzahl der Pfannkuchen
-    v.	Und ein Button: „LETS MAKE PANCAKES!“ – Lass uns Pfannkuchen machen
-  c.	Unten befindet sich eine Bottom Navigation Bar in der man durch die einzelnen Seiten der App navigieren kann:
-    i.	„Pancake Time“ - Pfannkuchen Zeit, die aktuelle Seite
-    ii.	„Your Recipe“ - Dein Rezept, zeigt das Ergebnis der Berechnung an
-    iii.	„Pancake History“ - Pfannkuchen Verlauf, zeigt alle zuvor berechneten Rezepte
+ *	Oben Rechts ist ein Fragezeichen-Symbol für weitere Informationen zur Formel und zur App
+ *	Die Seite an sich bietet die Möglichkeit die folgenden Parameter einzugeben:  
+    i.	„Name of the Recipe“ - Name des Rezeptes  
+    ii.	„Pan diameter in cm“ - Pfannendurchmesser in Zentimeter  
+    iii.	„Desired thickness in cm“ - Gewünschte Dicke der Pfannkuchen in Zentimeter  
+    iv.	„Number of Pancakes“ - Anzahl der Pfannkuchen  
+    v.	Und ein Button: „LETS MAKE PANCAKES!“ – Lass uns Pfannkuchen machen  
+ *	Unten befindet sich eine Bottom Navigation Bar in der man durch die einzelnen Seiten der App navigieren kann:  
+    i.	„Pancake Time“ - Pfannkuchen Zeit, die aktuelle Seite  
+    ii.	„Your Recipe“ - Dein Rezept, zeigt das Ergebnis der Berechnung an   
+    iii.	„Pancake History“ - Pfannkuchen Verlauf, zeigt alle zuvor berechneten Rezepte  
 3.	Geben sie Werte für die Parameter ein.
 4.	Geben sie für „Name of the Recipe“: „My first Recipe“ ein.
 5.	Geben sie für „Pan diameter in cm“: „18“ ein.
@@ -39,9 +39,9 @@ It is part of a lecture in our Business IT Bachelor.
 8.	Klicken sie auf den Button „LETS MAKE PANCAKES!“.
 9.	Die Seite wechselt nach dem Button-Klick zur Ansicht „Your Recipe“.
 10.	Es werden ihnen folgende Werte angezeigt:
-  a.	Die eingegebenen Parameter
-  b.	Die Menge an benötigtem Teig
-  c.	Das Rezept für die Menge des Teigs
+  *	Die eingegebenen Parameter
+  *	Die Menge an benötigtem Teig
+  *	Das Rezept für die Menge des Teigs
 11.	Wählen sie nun in der Bottom Navigation Bar „Pancake History“.
 12.	Wählen sie dort den obersten Eintrag „My first App“.
 13.	Sie werden zurück zu Ansicht „Your Recipe“ gebracht
