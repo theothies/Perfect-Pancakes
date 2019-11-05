@@ -108,7 +108,7 @@ public class HistoryFragment extends Fragment implements PancakeListAdapter.OnIt
             Fragment fragment = new RecipeFragment();
             Bundle paramPancake = new Bundle();
             paramPancake.putParcelable("pancake", pancake);
-            Navigation.findNavController(root).navigate(R.id.navigation_dashboard, paramPancake);
+            Navigation.findNavController(root).navigate(R.id.navigation_recipe, paramPancake);
             fragment.setArguments(paramPancake);
         }
     }

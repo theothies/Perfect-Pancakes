@@ -87,12 +87,12 @@ public class PancakeFragment extends Fragment {
                     Double.parseDouble(thiccness.getText().toString()), batter,
                     egg, milk, butter, flour, water, Integer.parseInt(number.getText().toString()));
 
-                    new SaveTask().execute(pancake);
+            new SaveTask().execute(pancake);
 
             Fragment fragment = new RecipeFragment();
             Bundle paramPancake = new Bundle();
             paramPancake.putParcelable("pancake", pancake);
-            Navigation.findNavController(root).navigate(R.id.navigation_dashboard, paramPancake);
+            Navigation.findNavController(root).navigate(R.id.navigation_recipe, paramPancake);
             fragment.setArguments(paramPancake);
 
 

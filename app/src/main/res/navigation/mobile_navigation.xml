@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_pancake">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_pancake"
         android:name="com.example.perfectpancakes.ui.pancake.PancakeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_pancake" >
         <action
             android:id="@+id/action_navigation_home_to_navigation_dashboard"
-            app:destination="@+id/navigation_dashboard" />
+            app:destination="@+id/navigation_recipe" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_recipe"
         android:name="com.example.perfectpancakes.ui.recipe.RecipeFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_recipe" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_history"
         android:name="com.example.perfectpancakes.ui.history.HistoryFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_history" />
