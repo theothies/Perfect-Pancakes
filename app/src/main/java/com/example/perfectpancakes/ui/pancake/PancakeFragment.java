@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
 import com.example.perfectpancakes.PancakeRoomDatabase;
@@ -27,7 +26,6 @@ public class PancakeFragment extends Fragment {
 
     private View root;
     private PancakeDao dao;
-    private PancakeViewModel pancakeViewModel;
     private Button calculate;
     private EditText title;
     private EditText diameter;
@@ -36,8 +34,6 @@ public class PancakeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        pancakeViewModel = ViewModelProviders.of(this).get(PancakeViewModel.class);
-
         root = inflater.inflate(R.layout.fragment_pancake, container, false);
 
         dao = PancakeRoomDatabase.getDatabase(getActivity()).pancakeDao();
@@ -65,7 +61,7 @@ public class PancakeFragment extends Fragment {
 
         //saves date as String
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy, HH:mm");
         String strDate = formatter.format(date);
 
         //creates pancake object and saves into DB
