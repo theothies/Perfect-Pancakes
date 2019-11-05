@@ -16,8 +16,28 @@ Depending on die diameter of your pan and the desired thickness of your pancake 
 
 It is part of a lecture in our Business IT Bachelor.
 
-## Scripted Text in German
+## Scripted Text
+in German
+### Kopfdaten
+* Testfall-ID: ANDROID_PERFECT_PANCAKES
+* Autoren: Enes Özdogan, Theodor Thiessen
+* Version vom 05.11.2019
 
+### Beschreibung Testfall
+Die zu testende App berechnet anhand einer Formel wie viel Milliliter Teig man für die Menge der gewünschten Pfannkuchen braucht. Die Formel braucht dazu die folgenden Parameter des Nutzers: die Menge der gewünschten Pfannkuchen, den Durchmesser der Pfanne in Zentimeter und die gewünschte Dicke der Pfannkuchen in Zentimeter.  
+Als Ergebnis bekommt man neben der benötigten Menge an Teig auch das Rezept mit der Menge an Eiern, Milch in Milliliter, Butter in Gramm, Mehl in Gramm und Wasser in Milliliter angezeigt.  
+Die Ergebnisse werden in einem Verlauf gespeichert und können auch noch später abgerufen und gelöscht werden können.
+
+### Referenzen
+Github der App: https://github.com/theothies/Perfect-Pancakes
+
+### Vorbereitung
+* Auf dem Android-Gerät ist die aktuelle Version der App „Perfect Pancakes“ installiert
+* Die App benötigt keinen Internetzugang
+* Die Systemzeit auf dem Android-Gerät ist aktuell
+* Die Systemsprache des Gerätes ist „Englisch“
+
+### Testdurchführung
 1.	Öffnen sie die App „Perfect Pancakes“
 2.	Es erscheint die Hauptseite, die mehrere Möglichkeiten bietet:
  *	Oben Rechts ist ein Fragezeichen-Symbol für weitere Informationen zur Formel und zur App
