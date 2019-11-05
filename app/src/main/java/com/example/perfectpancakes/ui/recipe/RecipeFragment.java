@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.perfectpancakes.PancakeRoomDatabase;
 import com.example.perfectpancakes.R;
@@ -21,15 +20,12 @@ public class RecipeFragment extends Fragment {
 
     private View root;
     private PancakeDao dao;
-    private RecipeViewModel recipeViewModel;
     private  TextView dia_input, thicc_input, amount_input;
     private  TextView batter_output, egg_output, milk_output, butter_output, flour_output, water_output;
     private DecimalFormat formatter = new DecimalFormat("#");
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        recipeViewModel =
-                ViewModelProviders.of(this).get(RecipeViewModel.class);
         root = inflater.inflate(R.layout.fragment_recipe, container, false);
         dao = PancakeRoomDatabase.getDatabase(getActivity()).pancakeDao();
         addTVtoView(root);
@@ -60,7 +56,6 @@ public class RecipeFragment extends Fragment {
     }
 
     public void setResults(Pancake pancake){
-        getActivity().setTitle(""+pancake.getTitle());
         dia_input.setText(""+pancake.getDiameter()+" cm");
         thicc_input.setText(""+pancake.getThickness()+" cm");
         amount_input.setText(""+pancake.getAmount());
