@@ -40,7 +40,7 @@ public class PancakeFragment extends Fragment {
 
         getViews(root);
 
-        calculate.setOnClickListener(new View.OnClickListener() {
+                calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 savePancakeOnClick();
@@ -70,28 +70,32 @@ public class PancakeFragment extends Fragment {
         !thiccness.getText().toString().isEmpty() &&
         !number.getText().toString().isEmpty()){
 
-            double batter = ( ( (Double.parseDouble(diameter.getText().toString())) * (Double.parseDouble(diameter.getText().toString())) )
-                    * Double.parseDouble(thiccness.getText().toString()) * Math.PI * 1.06 * Integer.parseInt(number.getText().toString()) ) / 4;
-            double egg = batter * 0.004;
-            double milk = batter * 0.412;
-            double butter = batter * 0.103;
-            double flour = batter * 0.227;
-            double water = batter * 0.155;
+            // if (title not taken yet) {
 
-            Pancake pancake = new Pancake(title.getText().toString(),
-                    strDate, Double.parseDouble(diameter.getText().toString()),
-                    Double.parseDouble(thiccness.getText().toString()), batter,
-                    egg, milk, butter, flour, water, Integer.parseInt(number.getText().toString()));
+                double batter = (((Double.parseDouble(diameter.getText().toString())) * (Double.parseDouble(diameter.getText().toString())))
+                        * Double.parseDouble(thiccness.getText().toString()) * Math.PI * 1.06 * Integer.parseInt(number.getText().toString())) / 4;
+                double egg = batter * 0.004;
+                double milk = batter * 0.412;
+                double butter = batter * 0.103;
+                double flour = batter * 0.227;
+                double water = batter * 0.155;
 
-            new SaveTask().execute(pancake);
+                Pancake pancake = new Pancake(title.getText().toString(),
+                        strDate, Double.parseDouble(diameter.getText().toString()),
+                        Double.parseDouble(thiccness.getText().toString()), batter,
+                        egg, milk, butter, flour, water, Integer.parseInt(number.getText().toString()));
 
-            Fragment fragment = new RecipeFragment();
-            Bundle paramPancake = new Bundle();
-            paramPancake.putParcelable("pancake", pancake);
-            Navigation.findNavController(root).navigate(R.id.navigation_recipe, paramPancake);
-            fragment.setArguments(paramPancake);
+                new SaveTask().execute(pancake);
 
+                Fragment fragment = new RecipeFragment();
+                Bundle paramPancake = new Bundle();
+                paramPancake.putParcelable("pancake", pancake);
+                Navigation.findNavController(root).navigate(R.id.navigation_recipe, paramPancake);
+                fragment.setArguments(paramPancake);
 
+            //} else {
+            //  Toast.makeText(getActivity(),"Recipe Name already taken. Please use another recipe name", Toast.LENGTH_SHORT).show();
+            //}  <--- soll vermeiden, dass ein Titel mehrfach als Titel benutzt werden kann
 
         }else{
             Toast.makeText(getActivity(),"Please fill every parameter", Toast.LENGTH_SHORT).show();
